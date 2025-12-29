@@ -1,8 +1,9 @@
 # Government
 My resume from complete website delivered online adds
-index.html (Login Page)
-
-<!DOCTYPE html><html lang="en">
+index.html (Login Page) 
+# index.html (Login Page)
+<!DOCTYPE html>
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <title>Government – Login</title>
@@ -25,11 +26,12 @@ p{font-size:12px;color:#888;}
 </div>
 </body>
 </html>
+
 ---
 
-dashboard.html (Main Dashboard with Deposit/Withdraw/Ads popup)
-
-<!DOCTYPE html><html lang="en">
+# dashboard.html (Main Dashboard with Deposit/Withdraw/Ads popup)
+<!DOCTYPE html>
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <title>Government – Dashboard</title>
@@ -71,4 +73,37 @@ body{margin:0;font-family:Arial;background:#f4fff8;padding-bottom:70px;}
   <div class="info"><div>User: <b>demo_user</b></div><div>Ref: <b>admin</b></div></div>
   <div class="cards">
     <div class="card"><h4>Pending Tasks</h4><p>85</p></div>
-    <div class="card"><h4>Total Deposit</h4><p>
+    <div class="card"><h4>Total Deposit</h4><p>PKR 25,000</p></div>
+    <div class="card"><h4>Total Withdraw</h4><p>PKR 379,600</p></div>
+    <div class="card"><h4>Task Earnings</h4><p>PKR 0.00</p></div>
+  </div>
+  <div class="footer">Government Demo Platform<br>Training purpose only – No real earnings</div>
+</div>
+<div class="menu">
+  <a href="dashboard.html">🏠<br>Home</a>
+  <a href="team.html">👥<br>Team</a>
+  <a href="profile.html">👤<br>Profile</a>
+</div>
+<div class="popup" id="popup"><div class="popup-box" id="popupContent"></div></div>
+<script>
+function openPopup(type){
+  let content='';
+  if(type==='deposit'){
+    content=`<h3>Deposit (Demo)</h3><input placeholder="Enter amount"><input placeholder="Transaction ID"><button class='btn'>Submit</button><div class='close' onclick='closePopup()'>Close</div>`;
+  }
+  if(type==='withdraw'){
+    content=`<h3>Withdraw (Demo)</h3><input placeholder="Enter amount"><input placeholder="Wallet number"><button class='btn'>Request</button><div class='close' onclick='closePopup()'>Close</div>`;
+  }
+  if(type==='ads'){
+    content=`<h3>Watch Ads (Demo)</h3><p>Ad watching is disabled in demo mode.</p><button class='btn' onclick='closePopup()'>OK</button>`;
+  }
+  document.getElementById('popupContent').innerHTML=content;
+  document.getElementById('popup').style.display='flex';
+}
+function closePopup(){document.getElementById('popup').style.display='none';}
+</script>
+</body>
+</html>
+
+---
+# team.html & profile.html بھی اسی structure کے ساتھ add کریں۔
